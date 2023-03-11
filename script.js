@@ -17,8 +17,7 @@ $(document).ready(function () {
     $("body, html").animate(
       {
         scrollTop: $(this.hash).offset().top,
-      },
-      50
+      }, 100
     );
   });
 });
