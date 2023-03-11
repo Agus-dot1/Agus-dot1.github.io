@@ -339,3 +339,7 @@ footer ul{
     cursor: default;
     font-size: 10px;
 }
+
+#minifix{
+    cursor: default !important;
+}
