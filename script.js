@@ -1,4 +1,4 @@
-document.cookie = "myCookie=example; SameSite=Lax; Secure; HttpOnly";
+document.cookie = "cookies=cookie; SameSite=Lax; Secure; HttpOnly";
 
 var now = new Date();
 var expirationDate = new Date(now.getTime() + (24 * 60 * 60 * 1000));
