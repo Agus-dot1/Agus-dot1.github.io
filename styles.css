@@ -1,0 +1,341 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.background-image{
+    background-image: url('../images/BOOK-LEA-2.jpg');
+    background-repeat:space;
+    background-size:auto;
+    background-position: right;
+    height: 100vh;
+    width: 100%;
+    background-color: #B1A7A6;
+    filter: grayscale(80%);
+    z-index: 0;
+}
+
+.work-section-background{
+    background-color: #c7c3bc;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    height: 100vh;
+    width: 100%;
+    filter: grayscale(50%);
+}
+
+.acade-section{
+    background-color: #5A189A;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    height: 100vh;
+    width: 100%;
+    filter: grayscale(80%);
+}
+
+h1{
+    font-weight: bold;
+    font-size: 1.7rem;
+    letter-spacing: 0.1em;
+    color: #3e4042;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+h1:hover{
+    color: #000;
+    cursor: pointer;
+}
+
+.acade-section #third-sub{
+    color: #d8d8d8;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 1.5%;
+}
+
+.description{
+    font-weight: 300;
+}
+
+li, a, p{
+    font-size: 1rem;
+    color: #3e4042;
+    text-decoration: none;
+    list-style: none;
+}
+
+.nav-links{
+    list-style: none;
+    margin-right: 50px;
+}
+
+.nav-links li {
+    display: inline-block;
+    padding: 0 20px;
+    padding-bottom: 0.25rem;
+    position: relative;
+}
+
+.nav-links li a::before{
+    content: "";
+    position: absolute;
+    left: 1;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #3e4042;
+    transition: width 200ms ease-in-out;
+} 
+
+.nav-links li a:hover::before{
+    width: 68%;
+    background-color: #000;
+}
+
+
+.nav-links .underlineExeption:hover::before{
+    width: 75%;
+    background-color: #000;    
+}
+
+
+.nav-links li a {
+    transition: all 0.2s;
+    font-weight: bold;
+}
+
+.nav-links li a:hover {
+    color: #000;
+}
+
+
+i {
+    font-size: 24px;
+    color: #272a2e;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+i:hover {
+    color: #000;
+}
+
+#no-style{
+    color: #dadada;
+    transition: none;
+    margin-left: 10px;
+    cursor: default;
+}
+
+#styled{
+    color: #dadada;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: all 0.2;
+}
+
+#styled:hover{
+    color: #761ad3;
+}
+
+
+.information{
+    display: block;
+    position: absolute;
+    top: 30%;
+    margin-left: 5%;
+    line-height: 2;
+    background: rgba(66, 66, 66, 0.5);
+    backdrop-filter: blur(10px);
+    height: 20rem;
+    width: 30rem;
+    box-shadow: rgba(128, 128, 128, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border-radius: 5px;
+}
+
+.sub-title{
+    color: #2e2f30;
+    padding: 20px 0 0 20px;
+}
+
+.bold-basic{
+   font-size: 35px;
+   font-weight: 700px;
+   letter-spacing: 1px;
+   font-family: 'Poppins', sans-serif;
+}
+
+p{
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 0 20px;
+}
+
+
+
+.align-text-center{
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.work-section{
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: 33% 35% 34%;
+    grid-template-rows: auto 100px;
+    place-items: center;
+    align-content: center;
+}
+
+.hidden{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translate(-100%);
+    transition: all 1s;
+    
+}
+
+.show{
+    filter: blur(0);
+    transform: translate(0);
+    opacity: 1;
+} 
+
+iframe{
+    height: 680px;
+    width: 500px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.acade-info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.acade-info iframe{
+    background: none;
+    backdrop-filter: blur(0);
+    box-shadow: none;
+    border-radius: 10px;
+    height: 38rem;
+    width: 90rem;
+}
+
+.acade-info p{
+    line-height: 1.5;
+}
+
+.master{
+    color: #fff;
+    transition: all 0.2s;
+    border-bottom: 1px solid #fff;
+    font-size: 1.2rem;
+    margin: 0 6px;
+}
+
+.master:hover{
+    color: #a7a7a7;
+    border-bottom: 1px solid #a7a7a7;
+}
+
+footer{
+    background-color: #272a2e;
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 50px 5% 0 15%;
+    filter: grayscale(80%);
+}
+
+#footer-title{
+    color: #dadada;
+    font-size: 1.2rem;
+}
+
+form input{
+    color: #dadada;
+    font-size: 1.2rem;
+    padding: 10px ;
+    width: 17rem;
+    height: 4rem;
+    border: 1px solid #272a2e;
+    border-radius: 10px;
+    background-color: #151618;
+    outline: none;
+}
+
+form button[type="submit"]{
+    background-color: #5A189A;
+    color: #dadada;
+    font-size: 1.2rem;
+    padding: 10px;
+    width: 9rem;
+    height: 4rem;
+    border-radius: 10px;
+    border: 1px solid #272a2e;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+
+
+form button[type="submit"]:hover{
+   background-color: #3b2e49;
+}
+
+footer ul{
+    display: flex;
+}
+
+
+.position{
+    font-size: 2rem;
+    margin-right: 20px;
+}
+
+#footer-redes{
+    margin-left: 2rem;
+    margin-bottom: 0.5cm;
+    color: #dadada;
+    filter: grayscale(80%);
+}
+
+.termns{
+        background-color: #292a2b;
+        padding-bottom: 20px;
+        padding-right: 100px;
+}
+
+.termns p{
+    font-size: 10px;
+    cursor: default;
+}
+
+#last-i{
+    color: #dadada;
+    transition: none;
+    margin-right: 5px;
+    cursor: default;
+    font-size: 10px;
+}
