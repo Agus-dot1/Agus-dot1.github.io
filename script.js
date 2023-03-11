@@ -1,3 +1,10 @@
+document.cookie = "myCookie=example; SameSite=Lax; Secure; HttpOnly";
+
+var now = new Date();
+var expirationDate = new Date(now.getTime() + (24 * 60 * 60 * 1000));
+document.cookie = "myCookie=example; expires=" + expirationDate.toUTCString();
+
+
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     console.log(entry);
