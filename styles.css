@@ -73,8 +73,6 @@ html{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    overflow-x: hidden;
-    overflow-y: scroll;
 }
 
 .bio-section{ 
