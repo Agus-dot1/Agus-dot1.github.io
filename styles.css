@@ -3,6 +3,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
+
 }
 
 html{
@@ -11,6 +12,13 @@ html{
 
 .sub-title:first-of-type{
     padding: 10px 0 0 20px;
+}
+
+#underline{
+    color:#151618;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-decoration: underline;
 }
 
 .background-image{
@@ -22,17 +30,94 @@ html{
     width: 100%;
     background-color: #B1A7A6;
     filter: grayscale(80%);
-    z-index: 0;
 }
 
-.work-section-background{
+
+.info-bio{
     background-color: #c7c3bc;
+    height: 100vh;
+    filter: grayscale(50%);
+    padding: 3%;
+    padding-left: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.bio-section{ 
+    width: 700px;
+    margin-right: 350px;
+}
+
+#bio-text{
+    font-family: "poppins", sans-serif;
+    padding: 0;
+    color:#151618;
+    font-size: 1.4em;
+    letter-spacing: 0.5px;
+}
+
+.carousel-container{
+    width: 600px;
+    height: 90%;
+    overflow: hidden;
+    margin-right: 100px;
+    position: relative;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.5s;
+}
+
+.carousel-container:hover{
+    transform: translate(-10px, -10px);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.carousel-slide{
+    display: flex;
+    height: 650px;
+}
+
+#prevBtn{
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    color: #fff;
+    cursor: pointer;
+    left: 2%;
+    height: 20px;
+    width: 20px;
+    transition: all 0.3s;
+}
+
+
+#nextBtn{
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    color:#fff;
+    cursor: pointer;
+    right: 2%;
+    height: 20px;
+    width: 20px;
+}
+
+#prevBtn:active, #nextBtn:active{
+    color: #a7a7a7;
+}
+
+
+.work-section-background{
+    background-color: #3d12348c;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     filter: grayscale(50%);
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .acade-section{
@@ -40,9 +125,11 @@ html{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     filter: grayscale(80%);
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 h1{
@@ -71,7 +158,7 @@ header {
 }
 
 .description{
-    font-weight: 300;
+    letter-spacing: 0.5px;
 }
 
 li, a, p{
@@ -160,7 +247,7 @@ i:hover {
     line-height: 2;
     background: rgba(66, 66, 66, 0.5);
     backdrop-filter: blur(10px);
-    height: 20rem;
+    height: 19.5rem;
     width: 30rem;
     box-shadow: rgba(128, 128, 128, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     border-radius: 5px;
@@ -197,6 +284,7 @@ p{
     grid-template-rows: auto 100px;
     place-items: center;
     align-content: center;
+    margin-bottom: 10px;
 }
 
 .hidden{
@@ -204,7 +292,6 @@ p{
     filter: blur(5px);
     transform: translate(-100%);
     transition: all 1s;
-    
 }
 
 .show{
@@ -239,6 +326,7 @@ iframe{
     border-radius: 10px;
     height: 38rem;
     width: 90rem;
+    margin-bottom: 100px;
 }
 
 .acade-info p{
@@ -261,12 +349,13 @@ iframe{
 footer{
     background-color: #272a2e;
     width: 100%;
-    height: 30vh;
+    height: 250px;
     display: flex;
     justify-content: space-between;
     align-items: baseline;
     padding: 50px 5% 0 15%;
     filter: grayscale(80%);
+    overflow: visible;
 }
 
 #footer-title{
@@ -279,7 +368,7 @@ form input{
     font-size: 1.2rem;
     padding: 10px ;
     width: 17rem;
-    height: 4rem;
+    height: 3rem;
     border: 1px solid #272a2e;
     border-radius: 10px;
     background-color: #151618;
@@ -290,9 +379,9 @@ form button[type="submit"]{
     background-color: #5A189A;
     color: #dadada;
     font-size: 1.2rem;
-    padding: 10px;
+    padding-right: 5px;
     width: 9rem;
-    height: 4rem;
+    height: 3rem;
     border-radius: 10px;
     border: 1px solid #272a2e;
     outline: none;
@@ -343,3 +432,5 @@ footer ul{
 #minifix{
     cursor: default !important;
 }
+
+

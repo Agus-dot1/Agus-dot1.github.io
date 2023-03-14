@@ -1,9 +1,4 @@
-document.cookie = "cookies=cookie; SameSite=Lax; Secure; HttpOnly";
-
-var now = new Date();
-var expirationDate = new Date(now.getTime() + (24 * 60 * 60 * 1000));
-document.cookie = "myCookie=example; expires=" + expirationDate.toUTCString();
-
+//Object animation when scrolling:
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -17,14 +12,65 @@ const observer = new IntersectionObserver((entries) => {
 const hiddenElements = document.querySelectorAll(".hidden");
 hiddenElements.forEach((el) => observer.observe(el));
 
-$(document).ready(function () {
-  var ir_a = $(".desplazar");
-  ir_a.click(function (evento) {
-    evento.preventDefault();
-    $("body, html").animate(
-      {
-        scrollTop: $(this.hash).offset().top,
-      }, 500
-    );
-  });
+//smooth scrolling whit anchor
+
+window.scroll({
+  top: 2500, 
+  left: 0, 
+  behavior: 'smooth'
 });
+
+window.scrollBy({ 
+  top: 100,
+  left: 0, 
+  behavior: 'smooth' 
+});
+
+document.querySelector('.desplazar').scrollIntoView({ 
+  behavior: 'smooth' 
+});
+
+//image slider for bio
+
+const carouselSlide = document.querySelector('.carousel-slide');
+const carouselImages = document.querySelectorAll('.carousel-slide img');
+
+//buttons
+const prevBtn = document.querySelector('#prevBtn');
+const nextBtn = document.querySelector('#nextBtn');
+
+//counter
+let counter = 1;
+const size = carouselImages[0].clientWidth;
+
+carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+
+//button listeners
+
+nextBtn.addEventListener('click',() => {
+  if(counter >= carouselImages.length - 1) return;
+  carouselSlide.style.transition = 'transform 0.4s ease-in-out'
+  counter++
+  carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+});
+
+prevBtn.addEventListener('click', () => {
+  if(counter <= 0) return;
+  carouselSlide.style.transition = 'transform 0.4s ease-in-out'
+  counter--;
+  carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+});
+
+carouselSlide.addEventListener('transitionend', () =>{
+  if(carouselImages[counter].id === 'last-clone'){
+    carouselSlide.style.transition = 'none';
+    counter = carouselImages.length - 2;
+    carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+  }
+  if(carouselImages[counter].id === 'first-clone'){
+    carouselSlide.style.transition = 'none';
+    counter = carouselImages.length - counter;
+    carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+  }
+});
+
