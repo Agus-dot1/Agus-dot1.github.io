@@ -173,13 +173,8 @@ h1{
     letter-spacing: 0.1em;
     color: #3e4042;
     cursor: pointer;
-    transition: all 0.2s;
 }
 
-h1:hover{
-    color: #000;
-    cursor: pointer;
-}
 
 .acade-section #third-sub{
     color: #d8d8d8;
