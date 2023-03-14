@@ -3,11 +3,41 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
-
 }
 
 html{
     scroll-behavior: smooth;
+}
+
+#scroll-to-top{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    right: 30px;
+    bottom: 60px;
+    border-radius: 50%;
+    background:#151618;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    z-index: 1;
+    transition: all 0.3s;
+    padding-top: 12px;
+}
+
+#scroll-to-top:hover{
+    background: #fff;
+}
+
+#scroll-top-style{
+    width: 50px;
+    height: 50px;
+    color: #fff;
+}
+
+#scroll-top-style:hover{
+    color: #151618;
 }
 
 .sub-title:first-of-type{
@@ -39,6 +69,7 @@ html{
     filter: grayscale(50%);
     padding: 5%;
     padding-bottom: 10.2%;
+    padding-right: 10%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -63,13 +94,16 @@ html{
     width: 600px;
     height: 90%;
     overflow: hidden;
-    margin-right: 100px;
     position: relative;
     border-radius: 10px;
-    transition: transform 0.3s, box-shadow 0.5s;
 }
 
-.carousel-container:hover{
+.carousel-hover{
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+
+.carousel-hover:hover{
     transform: translate(-10px, -10px);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
@@ -78,6 +112,7 @@ html{
     display: flex;
     height: 650px;
 }
+
 
 #prevBtn{
     position: absolute;
@@ -119,7 +154,7 @@ html{
 .work-section{
     margin-top: 80px;
     display: grid;
-    grid-template-columns: 35% 32% 34%;
+    grid-template-columns: 32% 32% 32%;
     place-items: center;
     align-content: center;
 }
@@ -256,6 +291,12 @@ i:hover {
 .sub-title{
     color: #2e2f30;
     padding: 20px 0 0 20px;
+}
+
+#productions{
+    padding: 0;
+    padding-right: 70px;
+    padding-top: 20px;
 }
 
 .bold-basic{

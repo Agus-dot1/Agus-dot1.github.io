@@ -11,12 +11,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/94a7007d05.js" crossorigin="anonymous"></script>
-    <script src="jquery-3.6.4.min.js"></script>
     <title>LEAINTHEMIX PAGINA OFICIAL</title>
 </head>
 
 <body>
-    <div class="background-image hidden">
+    <div id="top" class="background-image hidden">
         <header>
             <h1 id="header" class="hidden">LEA IN THE MIX</h1>
             <nav>
@@ -36,6 +35,11 @@
             </div>
         </header>
     </div>
+    <button id="scroll-to-top" class="hidden">
+        <a class="desplazar" href="#top">
+            <i id="scroll-top-style" class="fa-sharp fa-solid fa-chevron-up"></i>
+        </a>
+    </button>
     <div class="info-bio">
         <div>
             <h3 id="underline" class="bold-basic hidden"><span class="camel-style">B</span>iografía</h3>
@@ -55,7 +59,7 @@
                     en las que predomina el genero "Aleteo".</p>
             </div>
         </div>
-        <div>
+        <div class="carousel-hover">
             <div class="carousel-container hidden">
                 <i class="fa-solid fa-chevron-left" id="prevBtn"></i>
                 <i class="fa-solid fa-chevron-right" id="nextBtn"></i>
@@ -129,4 +133,5 @@
     </div>
     <script defer src="script.js"></script>
 </body>
+
 </html>
