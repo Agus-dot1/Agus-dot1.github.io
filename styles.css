@@ -35,15 +35,15 @@ html{
 
 .info-bio{
     background-color: #c7c3bc;
-    height: 100vh;
+    height: 100%;
     filter: grayscale(50%);
-    padding: 3%;
-    padding-left: 5%;
+    padding: 5%;
+    padding-bottom: 10.2%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     overflow-x: hidden;
-    overflow-y: auto;
+    overflow-y: scroll;
 }
 
 .bio-section{ 
@@ -109,27 +109,27 @@ html{
 
 
 .work-section-background{
+    padding-bottom: 6%;
     background-color: #3d12348c;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top;
     height: 100%;
     width: 100%;
     filter: grayscale(50%);
-    overflow-y: scroll;
-    overflow-x: hidden;
+}
+
+.work-section{
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: 35% 32% 34%;
+    place-items: center;
+    align-content: center;
 }
 
 .acade-section{
     background-color: #5A189A;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top;
     height: 100%;
     width: 100%;
     filter: grayscale(80%);
-    overflow-y: scroll;
-    overflow-x: hidden;
+    padding-bottom: 90px;
 }
 
 h1{
@@ -277,16 +277,6 @@ p{
     justify-content: center;
 }
 
-.work-section{
-    margin-top: 80px;
-    display: grid;
-    grid-template-columns: 33% 35% 34%;
-    grid-template-rows: auto 100px;
-    place-items: center;
-    align-content: center;
-    margin-bottom: 10px;
-}
-
 .hidden{
     opacity: 0;
     filter: blur(5px);
@@ -326,7 +316,7 @@ iframe{
     border-radius: 10px;
     height: 38rem;
     width: 90rem;
-    margin-bottom: 100px;
+    box-shadow: rgba(24, 24, 24, 0.418) 0px 10px 20px, rgba(20, 20, 20, 0.445) 0px 6px 6px;
 }
 
 .acade-info p{
