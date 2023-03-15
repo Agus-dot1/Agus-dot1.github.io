@@ -5,10 +5,6 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-html{
-    scroll-behavior: smooth;
-}
-
 #scroll-to-top{
     position: fixed;
     width: 50px;

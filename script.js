@@ -14,21 +14,29 @@ hiddenElements.forEach((el) => observer.observe(el));
 
 //smooth scrolling whit anchor
 
-window.scroll({
-  top: 2500, 
-  left: 0, 
-  behavior: 'smooth'
-});
+function smoothScroll(target) {
+  var targetElement = document.querySelector(target);
+  var targetPosition = targetElement.getBoundingClientRect().top;
+  var startPosition = window.pageYOffset;
+  var distance = targetPosition - startPosition;
+  var duration = 1000; // adjust as needed
+  var start = null;
 
-window.scrollBy({ 
-  top: 100,
-  left: 0, 
-  behavior: 'smooth' 
-});
+  function step(timestamp) {
+    if (!start) start = timestamp;
+    var progress = timestamp - start;
+    var percentage = Math.min(progress / duration, 1);
+    window.scrollTo(0, startPosition + distance * easeInOutCubic(percentage));
+    if (progress < duration) window.requestAnimationFrame(step);
+  }
 
-document.querySelector('.desplazar').scrollIntoView({ 
-  behavior: 'smooth' 
-});
+  function easeInOutCubic(t) {
+    return t<.5 ? 4*t*t*t : (t-1)*(2*t-2)*(2*t-2)+1;
+  }
+
+  window.requestAnimationFrame(step);
+}
+
 
 //image slider for bio
 
