@@ -16,7 +16,7 @@ hiddenElements.forEach((el) => observer.observe(el));
 
 setTimeout(function() {
   window.scroll({
-    top: 0,
+    top: 2500,
     left: 0,
     behavior: 'smooth'
   });
