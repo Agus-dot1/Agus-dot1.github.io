@@ -15,7 +15,7 @@
   justify-content: center;
   align-items: center;
   background-color: #272a2e;
-  transition: opacity 10s, visibility 10s;
+  transition: opacity 0.3s, visibility 0.3s;
 }
 
 .loader-hidden {
@@ -30,7 +30,7 @@
 
 .loader::after {
   content: "";
-  animation: loading 0.75s ease infinite;
+  animation: loading 0.75s ease-in-out infinite;
 }
 
 @keyframes loading {
