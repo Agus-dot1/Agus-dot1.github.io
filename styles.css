@@ -5,6 +5,43 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+.loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #272a2e;
+    transition: opacity 1s, visibility 1s;
+}
+
+.loader-hidden{
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+.loader-img{
+    width: 700px;
+    height: 400px;
+}
+
+.loader::after{
+    content: "";
+    animation: loading 0.75s ease infinite;
+}
+
+@keyframes loading {
+    from{
+        transform: scale(2);
+    }
+}
+
+
+
 #scroll-to-top{
     position: fixed;
     width: 50px;
