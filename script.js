@@ -30,7 +30,7 @@ function smoothScroll(target) {
   var targetPosition = targetElement.getBoundingClientRect().top;
   var startPosition = window.pageYOffset;
   var distance = targetPosition - startPosition;
-  var duration = 1500; 
+  var duration = 1500;
   var start = null;
 
   function step(timestamp) {
@@ -42,7 +42,7 @@ function smoothScroll(target) {
   }
 
   function easeInOutCubic(t) {
-    return t<.5 ? 4*t*t*t : (t-1)*(2*t-2)*(2*t-2)+1;
+    return t < .5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
   }
 
   window.requestAnimationFrame(step);
@@ -66,30 +66,29 @@ carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
 
 //button listeners
 
-nextBtn.addEventListener('click',() => {
-  if(counter >= carouselImages.length - 1) return;
+nextBtn.addEventListener('click', () => {
+  if (counter >= carouselImages.length - 1) return;
   carouselSlide.style.transition = 'transform 0.4s ease-in-out'
   counter++
   carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
 });
 
 prevBtn.addEventListener('click', () => {
-  if(counter <= 0) return;
+  if (counter <= 0) return;
   carouselSlide.style.transition = 'transform 0.4s ease-in-out'
   counter--;
   carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
 });
 
-carouselSlide.addEventListener('transitionend', () =>{
-  if(carouselImages[counter].id === 'last-clone'){
+carouselSlide.addEventListener('transitionend', () => {
+  if (carouselImages[counter].id === 'last-clone') {
     carouselSlide.style.transition = 'none';
     counter = carouselImages.length - 2;
     carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
   }
-  if(carouselImages[counter].id === 'first-clone'){
+  if (carouselImages[counter].id === 'first-clone') {
     carouselSlide.style.transition = 'none';
     counter = carouselImages.length - counter;
     carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
   }
 });
-
