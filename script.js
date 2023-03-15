@@ -14,14 +14,13 @@ hiddenElements.forEach((el) => observer.observe(el));
 
 //smooth scrolling whit anchor
 
-setTimeout(function() {
+
   window.scroll({
     top: 2500,
     left: 0,
     behavior: 'smooth'
   });
-}, 10
-);
+;
 
 window.scrollBy({ 
   top: 100,
