@@ -69,6 +69,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    overflow-x: hidden;
 }
 
 .bio-section{ 
@@ -153,6 +154,7 @@
     height: 100%;
     width: 100%;
     filter: grayscale(50%);
+    overflow-x: hidden;
 }
 
 .work-section{
@@ -353,7 +355,7 @@ iframe{
     backdrop-filter: blur(0);
     box-shadow: none;
     border-radius: 10px;
-    height: 38rem;
+    height: 45rem;
     width: 90rem;
     box-shadow: rgba(24, 24, 24, 0.418) 0px 10px 20px, rgba(20, 20, 20, 0.445) 0px 6px 6px;
 }
@@ -385,6 +387,7 @@ footer{
     padding: 50px 5% 5% 15%;
     filter: grayscale(80%);
     overflow: visible;
+    overflow-x: hidden;
 }
 
 #footer-title{
