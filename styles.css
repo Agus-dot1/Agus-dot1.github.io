@@ -15,7 +15,7 @@
   justify-content: center;
   align-items: center;
   background-color: #272a2e;
-  transition: opacity 1s, visibility 1s;
+  transition: opacity 10s, visibility 10s;
 }
 
 .loader-hidden {
