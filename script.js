@@ -19,7 +19,7 @@ function smoothScroll(target) {
   var targetPosition = targetElement.getBoundingClientRect().top;
   var startPosition = window.pageYOffset;
   var distance = targetPosition - startPosition;
-  var duration = 1000; // adjust as needed
+  var duration = 1500; 
   var start = null;
 
   function step(timestamp) {
