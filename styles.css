@@ -348,7 +348,7 @@ i:hover {
 }
 
 .bold-basic::first-letter{
-  color: #dadada;
+  color: #f1f1f1;
 }
 
 .information .bold-basic:first-child::first-letter, .info-bio .bold-basic:first-child::first-letter, .work-section-background .bold-basic:first-child::first-letter{
@@ -529,38 +529,45 @@ footer ul {
   display: none;
 }
 
+.mobile-info-toggle{
+  display: none;
+}
+
 @media (max-width: 806px) {
   .primary-navigation {
-    position: fixed;
-    inset: 0 0 0 30%;
+    position: relative;
+    inset: 0 0 0 110%;
     z-index: 1000;
 
     background: hsl(0 0% 100% / 0.5);
     backdrop-filter: blur(0.5rem);
 
     flex-direction: column;
-    padding: min(30vh, 10rem) 2em;
+    padding: min(15vh, 10rem) 1px;
 
     transform: translateX(100%);
     transition: transform 0.5s ease;
+
+    border-radius: 10px;
+  }
+
+  header{
+    overflow-x: hidden;
   }
 
   .primary-navigation[data-visible="true"] {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    transform: translateX(0%);
+    transform: translateX(-10%);
   }
 
-  .navOp {
-    transform: translateX(100%);
-    transition: transform 0.5s ease;
-  }
+  .primary-information{
+    position: fixed;
+    inset: 0 0 0 0;
+    z-index: 999;
 
-  .navOp[data-visible="true"] {
-    transform: translateX(0%);
-  }
+    padding: 20px;
 
-  * {
-    overflow-x: hidden;
+    flex-direction: row;
   }
 
   .primary-navigation li {
@@ -578,7 +585,7 @@ footer ul {
   }
 
   .nav-links li a {
-    font-size: 0.8em;
+    font-size: 1em;
   }
 
   .nav-links li a::before {
@@ -596,9 +603,9 @@ footer ul {
     color: white;
     background-size: cover;
     position: absolute;
-    width: 2rem;
+    width: 3rem;
     aspect-ratio: 1;
-    top: 1rem;
+    top: 1.5rem;
     right: 1rem;
     border: none;
     animation: all 1s;
@@ -606,7 +613,7 @@ footer ul {
 
   .mobile-nav-toggle[aria-expanded="true"] {
     background: url("../images/close-svgrepo-com.svg");
-    width: 2rem;
+    width: 3rem;
     aspect-ratio: 1;
     background-size: cover;
   }
@@ -625,20 +632,29 @@ footer ul {
   }
 
   .logo-h1 {
+    padding-top: 10px;
+    padding-left: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
     top: 0;
-    left: 0;
-    width: 4.5em;
-    aspect-ratio: 1;
-  }
-  .loader {
-    display: none;
+    left: 5;
+    width: 3.8em;
+    height: 4em;
+    overflow: hidden;
   }
 
-  .information {
+  .logo-h1 img{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background-size: cover;
+  }
+
+
+
+  .loader {
     display: none;
   }
 
@@ -668,39 +684,93 @@ footer ul {
     height: 400px;
     overflow-x: hidden;
   }
+
   .information {
     display: block;
     position: absolute;
     background: rgba(143, 143, 143, 0.5);
     backdrop-filter: blur(20px);
-    top: 70%;
+    top: 40%;
     margin-left: 1%;
     line-height: 1.2;
-    height: 10.2rem;
-    width: 20rem;
+    height: 18rem;
+    width: 19rem;
     box-shadow: rgba(128, 128, 128, 0.25) 0px 54px 55px,
       rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
       rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     border-radius: 5px;
+    overflow-y: visible;
   
-    
   }
   
   #mobile-text{
-    font-size: 2.2em;
+    font-size: 2em;
     color: #f1f1f1;
+    
   }
   
   .description {
     font-weight: 500;
     color: #272a2e;
     letter-spacing: 0.1px;
-    font-size: 1.2em;
+    font-size: 1.1em;
   }
 
-}
+
 
 
 .information .bold-basic:first-child::first-letter{
   color: #fff;
+  overflow-y: visible;
+}
+
+
+
+.acade-section{
+  overflow-x: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
