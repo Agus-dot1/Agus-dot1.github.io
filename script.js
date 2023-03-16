@@ -2,10 +2,6 @@ window.addEventListener("load", () => {
   const loader = document.querySelector(".loader");
 
   loader.classList.add("loader-hidden")
-
-  loader.addEventListener("transitionend"), () => {
-    document.body.removeChild("loader");
-  }
 })
 
 
@@ -92,3 +88,23 @@ carouselSlide.addEventListener('transitionend', () => {
     carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
   }
 });
+
+
+const primaryNav = document.querySelector(".primary-navigation");
+const navToggle = document.querySelector(".mobile-nav-toggle");
+const navOptions = document.querySelector(".navOp");
+
+navToggle.addEventListener("click", () => {
+  const visibility = primaryNav.getAttribute("data-visible")
+  if(visibility === "false"){
+    primaryNav.setAttribute("data-visible", true);
+    navToggle.setAttribute("aria-expanded", true);
+    navOptions.setAttribute("data-visible", true);
+  } else if(visibility === "true"){
+    primaryNav.setAttribute("data-visible", false);
+    navToggle.setAttribute("aria-expanded", false);
+    navOptions.setAttribute("data-visible", false);
+  }
+})
+
+

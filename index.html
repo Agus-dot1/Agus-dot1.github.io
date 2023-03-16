@@ -18,13 +18,15 @@
     <div class="loader"><img class="loader-img" src="../images/logo.png" alt=""></div>
     <div id="top" class="background-image hidden">
         <header>
+            <div class="logo-h1"><img src="../images/logo.png"></div>
             <h1 class="hidden">LEA IN THE MIX</h1>
+            <button aria-expanded="false" class="mobile-nav-toggle"></button>
             <nav>
-                <ul class="nav-links hidden">
-                    <li><a class="underlineExeption desplazar" href="#productions"
+                <ul data-visible="false" id="primary-navigation" class="nav-links primary-navigation">
+                    <li><a class="underlineExeption desplazar navOp" href="#productions"
                             onclick="smoothScroll('#productions')">Producciones</a></li>
-                    <li><a class="desplazar" href="#third-sub" onclick="smoothScroll('#third-sub')">Academia</a></li>
-                    <li><a class="desplazar" href="#contacto"
+                    <li><a class="desplazar navOp" href="#third-sub" onclick="smoothScroll('#third-sub')">Academia</a></li>
+                    <li><a class="desplazar navOp" href="#contacto"
                             onclick="smoothScroll('#contacto'); highlightInput()">Contacto</a></li>
                 </ul>
             </nav>
@@ -62,17 +64,16 @@
                     en las que predomina el genero "Aleteo".</p>
             </div>
         </div>
-        <div class="carousel-hover">
+        <div class="carousel-hover hidden">
             <div class="carousel-container hidden">
                 <i class="fa-solid fa-chevron-left" id="prevBtn"></i>
                 <i class="fa-solid fa-chevron-right" id="nextBtn"></i>
                 <div class="carousel-slide">
                     <img class="center-image" src="../images/5.jpg " id="last-clone">
-                    <img class="center-image" src="../images/1.jpg ">
                     <img class="center-image" src="../images/2.jpg ">
                     <img class="center-image" src="../images/3.jpg ">
                     <img class="center-image" src="../images/5.jpg ">
-                    <img class="center-image" src="../images/1.jpg " id="first-clone">
+                    <img class="center-image" src="../images/2.jpg " id="first-clone">
                 </div>
             </div>
         </div>
@@ -110,7 +111,7 @@
     <footer>
         <div>
             <h3 id="footer-redes" class="bold-basic">Mis redes</h3>
-            <ul>
+            <ul class="redes-iconos">
                 <li><a id="minifix" target="_blank" href="https://www.instagram.com/leainthemix/?hl=es"><i id="styled"
                             class="fa-brands fa-instagram position"></i></a>
                 <li><a id="minifix" target="_blank" href="https://twitter.com/LEAINTHEMIX"><i id="styled"
