@@ -82,14 +82,13 @@
 }
 
 .background-image {
+  background-color: white;
   background-image: url("../images/BOOK-LEA-2.jpg");
-  background-repeat: space;
-  background-size: auto;
-  background-position: right;
-  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100svh;
   width: 100%;
-  background-color: #b1a7a6;
-  filter: grayscale(80%);
 }
 
 .info-bio {
@@ -183,14 +182,16 @@
   width: 100%;
   filter: grayscale(50%);
   overflow-x: hidden;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .work-section {
   margin-top: 80px;
   display: grid;
-  grid-template-columns: 32% 32% 32%;
+  grid-template-columns: 17.5% 60% 20%;
   place-items: center;
-  align-content: center;
 }
 
 .acade-section {
@@ -199,6 +200,9 @@
   width: 100%;
   filter: grayscale(80%);
   padding-bottom: 90px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 h1 {
@@ -330,6 +334,8 @@ i:hover {
   padding-top: 20px;
 }
 
+
+
 .bold-basic {
   font-size: 35px;
   font-weight: 700px;
@@ -337,16 +343,22 @@ i:hover {
   font-family: "Poppins", sans-serif;
 }
 
+.bold-basic::first-letter{
+  color: #d8d8d8;
+}
+
+.information .bold-basic:first-child::first-letter{
+  color: #272a2e;
+}
+
+.information .bold-basic:last-child:first-letter{
+  color: #fff;
+}
+
 p {
   color: #fff;
   font-size: 1.2rem;
   padding: 0 20px;
-}
-
-.align-text-center {
-  padding-top: 20px;
-  display: flex;
-  justify-content: center;
 }
 
 .hidden {
@@ -503,23 +515,21 @@ footer ul {
   cursor: default !important;
 }
 
-.logo-h1{
+.logo-h1 {
   display: none;
 }
 
-.mobile-nav-toggle{
+.mobile-nav-toggle {
   display: none;
 }
 
-
-@media (max-width: 806px){
-
-  .primary-navigation{
+@media (max-width: 806px) {
+  .primary-navigation {
     position: fixed;
     inset: 0 0 0 45%;
     z-index: 1000;
 
-    background: hsl(0 0% 100% / 0.50);
+    background: hsl(0 0% 100% / 0.5);
     backdrop-filter: blur(0.5rem);
 
     flex-direction: column;
@@ -529,54 +539,51 @@ footer ul {
     transition: transform 0.5s ease;
   }
 
-  .primary-navigation[data-visible="true"]{
+  .primary-navigation[data-visible="true"] {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     transform: translateX(0%);
   }
-  
-  .navOp{
+
+  .navOp {
     transform: translateX(100%);
     transition: transform 0.5s ease;
   }
 
-  .navOp[data-visible="true"]{
+  .navOp[data-visible="true"] {
     transform: translateX(0%);
   }
 
-  *{
+  * {
     overflow-x: hidden;
   }
 
-  .primary-navigation li{
+  .primary-navigation li {
     margin-top: 20px;
   }
 
-  .nav-links{
-    margin-right: 0 ;
+  .nav-links {
+    margin-right: 0;
   }
 
-  .nav-links li{
+  .nav-links li {
     display: block;
     padding: 0 20px;
     padding-bottom: 0;
   }
 
-  .nav-links li a{
+  .nav-links li a {
     font-size: 0.8em;
   }
 
-  .nav-links li a::before{
+  .nav-links li a::before {
     display: none;
   }
 
-  .nav-links li a::before{
+  .nav-links li a::before {
     display: none;
   }
 
-  
-
-
-  .mobile-nav-toggle{
+  .mobile-nav-toggle {
     display: block;
     z-index: 9999;
     background: url("../images/burger-menu-right-svgrepo-com.svg");
@@ -591,15 +598,12 @@ footer ul {
     animation: all 1s;
   }
 
-  .mobile-nav-toggle[aria-expanded="true"]{
+  .mobile-nav-toggle[aria-expanded="true"] {
     background: url("../images/close-svgrepo-com.svg");
     width: 2rem;
     aspect-ratio: 1;
     background-size: cover;
   }
-
-
-
 
   .background-image {
     background-image: url("../images/BOOK-LEA-2.jpg");
@@ -610,11 +614,11 @@ footer ul {
     width: 100vw;
   }
 
-  h1{
+  h1 {
     display: none;
   }
 
-  .logo-h1{
+  .logo-h1 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -623,16 +627,14 @@ footer ul {
     left: 0;
     width: 6.5em;
     aspect-ratio: 1;
-    
   }
-  .loader{
+  .loader {
     display: none;
   }
 
-  .information{
+  .information {
     display: none;
   }
-
 
   .hidden {
     opacity: 1;
@@ -640,15 +642,57 @@ footer ul {
     transform: none;
     transition: none;
   }
-  
+
   .show {
     filter: blur(0);
     transform: none;
     opacity: 1;
   }
 
-  #scroll-to-top{
+  #scroll-to-top {
     display: none;
   }
+  .carousel-hover {
+    display: none;
+  }
+  
+  .bio-section {
+    font-size: 0.8em;
+    width: 300px;
+    height: 400px;
+    overflow-x: hidden;
+  }
+  .information {
+    display: block;
+    position: absolute;
+    background: rgba(143, 143, 143, 0.5);
+    backdrop-filter: blur(20px);
+    top: 70%;
+    margin-left: 1%;
+    line-height: 1.2;
+    height: 10.2rem;
+    width: 20rem;
+    box-shadow: rgba(128, 128, 128, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border-radius: 5px;
+  
+    
+  }
+  
+  #mobile-text{
+    font-size: 2.2em;
+    color: #f1f1f1;
+  }
+  
+  .description {
+    font-weight: 500;
+    color: #272a2e;
+    letter-spacing: 0.1px;
+    font-size: 1.2em;
+  }
+
 }
+
+
 
