@@ -329,11 +329,15 @@ i:hover {
 }
 
 #productions {
+  color: #151618;
   padding: 0;
   padding-right: 70px;
   padding-top: 20px;
 }
 
+#productions::first-letter{
+  color: #151618;
+}
 
 
 .bold-basic {
@@ -344,10 +348,10 @@ i:hover {
 }
 
 .bold-basic::first-letter{
-  color: #d8d8d8;
+  color: #dadada;
 }
 
-.information .bold-basic:first-child::first-letter{
+.information .bold-basic:first-child::first-letter, .info-bio .bold-basic:first-child::first-letter, .work-section-background .bold-basic:first-child::first-letter{
   color: #272a2e;
 }
 
@@ -493,9 +497,11 @@ footer ul {
 }
 
 .termns {
-  background-color: #292a2b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #272a2e;
   padding-bottom: 20px;
-  padding-right: 100px;
 }
 
 .termns p {
@@ -526,7 +532,7 @@ footer ul {
 @media (max-width: 806px) {
   .primary-navigation {
     position: fixed;
-    inset: 0 0 0 45%;
+    inset: 0 0 0 30%;
     z-index: 1000;
 
     background: hsl(0 0% 100% / 0.5);
@@ -592,8 +598,8 @@ footer ul {
     position: absolute;
     width: 2rem;
     aspect-ratio: 1;
-    top: 2rem;
-    right: 2rem;
+    top: 1rem;
+    right: 1rem;
     border: none;
     animation: all 1s;
   }
@@ -625,7 +631,7 @@ footer ul {
     position: absolute;
     top: 0;
     left: 0;
-    width: 6.5em;
+    width: 4.5em;
     aspect-ratio: 1;
   }
   .loader {
@@ -695,4 +701,6 @@ footer ul {
 }
 
 
-
+.information .bold-basic:first-child::first-letter{
+  color: #fff;
+}
