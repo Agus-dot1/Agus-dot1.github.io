@@ -15,7 +15,7 @@
   justify-content: center;
   align-items: center;
   background-color: #272a2e;
-  transition: opacity 0.3s, visibility 0.3s;
+  transition: opacity 1s, visibility 1s;
 }
 
 .loader-hidden {
@@ -30,7 +30,7 @@
 
 .loader::after {
   content: "";
-  animation: loading 0.75s ease-in-out infinite;
+  animation: loading 0.75s ease infinite;
 }
 
 @keyframes loading {
@@ -84,7 +84,7 @@
 .background-image {
   background-image: url("../images/BOOK-LEA-2.jpg");
   background-repeat: space;
-  background-size: cover;
+  background-size: auto;
   background-position: right;
   height: 100vh;
   width: 100%;
@@ -206,7 +206,6 @@ h1 {
   font-size: 1.7rem;
   letter-spacing: 0.1em;
   color: #3e4042;
-  cursor: default;
 }
 
 .acade-section #third-sub {
@@ -295,6 +294,7 @@ i:hover {
 
 #styled {
   color: #dadada;
+  margin-left: 10px;
   cursor: pointer;
   transition: all 0.2;
 }
@@ -307,10 +307,10 @@ i:hover {
   display: block;
   position: absolute;
   top: 30%;
-  margin-left: 2%;
+  margin-left: 5%;
   line-height: 2;
   background: rgba(66, 66, 66, 0.5);
-  /* backdrop-filter: blur(10px); */
+  backdrop-filter: blur(10px);
   height: 19.5rem;
   width: 30rem;
   box-shadow: rgba(128, 128, 128, 0.25) 0px 54px 55px,
@@ -440,6 +440,11 @@ form input {
   outline: none;
 }
 
+.highlight {
+  background-color: #5a189a;
+  transition: background-color 2s ease-out;
+}
+
 form button[type="submit"] {
   background-color: #5a189a;
   color: #dadada;
@@ -473,14 +478,6 @@ footer ul {
   margin-bottom: 0.5cm;
   color: #dadada;
   filter: grayscale(80%);
-}
-
-.redes-iconos{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: fit-content;
-  gap: 15px;
 }
 
 .termns {
@@ -583,6 +580,7 @@ footer ul {
     display: block;
     z-index: 9999;
     background: url("../images/burger-menu-right-svgrepo-com.svg");
+    color: white;
     background-size: cover;
     position: absolute;
     width: 2rem;
@@ -608,7 +606,7 @@ footer ul {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    height: 100svh;
     width: 100vw;
   }
 
@@ -653,17 +651,4 @@ footer ul {
     display: none;
   }
 }
-
-.carousel-container{
-  display: none;
-}
-
-.bio-section {
-  width: 100%;
-  font-size: 10px;
-  height: 100px;
-  margin-right: none;
-  overflow-y: scroll;
-}
-
 
