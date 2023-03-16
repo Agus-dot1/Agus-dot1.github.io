@@ -644,13 +644,13 @@ footer ul {
 
   .hidden {
     opacity: 1;
-    filter: blur(5px);
+    filter: none;
     transform: none;
     transition: none;
   }
 
   .show {
-    filter: blur(0);
+    filter: none;
     transform: none;
     opacity: 1;
   }
