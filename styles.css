@@ -203,6 +203,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -534,9 +535,14 @@ footer ul {
 }
 
 @media (max-width: 806px) {
+
+  header{
+    overflow-x: hidden;
+  }
+
   .primary-navigation {
     position: relative;
-    inset: 0 0 0 110%;
+    inset: 0 0 0 370%;
     z-index: 1000;
 
     background: hsl(0 0% 100% / 0.5);
@@ -549,10 +555,6 @@ footer ul {
     transition: transform 0.5s ease;
 
     border-radius: 10px;
-  }
-
-  header{
-    overflow-x: hidden;
   }
 
   .primary-navigation[data-visible="true"] {
@@ -686,34 +688,37 @@ footer ul {
   }
 
   .information {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: absolute;
     background: rgba(143, 143, 143, 0.5);
     backdrop-filter: blur(20px);
     top: 40%;
     margin-left: 1%;
     line-height: 1.2;
-    height: 18rem;
-    width: 19rem;
+    height: 50%;
+    width: 95%;
     box-shadow: rgba(128, 128, 128, 0.25) 0px 54px 55px,
       rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
       rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     border-radius: 5px;
-    overflow-y: visible;
-  
+    overflow-y: hidden;
+    overflow-x: hidden;
   }
   
   #mobile-text{
-    font-size: 2em;
+    font-size: 30px;
     color: #f1f1f1;
-    
+    text-decoration: underline;
+    margin-bottom: 10px;
   }
   
   .description {
     font-weight: 500;
     color: #272a2e;
     letter-spacing: 0.1px;
-    font-size: 1.1em;
+    font-size: 1em;
   }
 
 
@@ -723,19 +728,6 @@ footer ul {
   color: #fff;
   overflow-y: visible;
 }
-
-
-
-.acade-section{
-  overflow-x: hidden;
-}
-
-
-
-
-
-
-
 
 
 
