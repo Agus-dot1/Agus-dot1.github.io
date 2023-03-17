@@ -94,6 +94,7 @@
 .info-bio {
   background-color: #c7c3bc;
   height: 100%;
+  width: 100%;
   filter: grayscale(50%);
   padding: 5%;
   padding-bottom: 7%;
@@ -327,6 +328,7 @@ i:hover {
 .sub-title {
   color: #2e2f30;
   padding: 20px 0 0 20px;
+  font-size: 2em;
 }
 
 #productions {
@@ -336,10 +338,9 @@ i:hover {
   padding-top: 20px;
 }
 
-#productions::first-letter{
+#productions::first-letter {
   color: #151618;
 }
-
 
 .bold-basic {
   font-size: 35px;
@@ -348,15 +349,17 @@ i:hover {
   font-family: "Poppins", sans-serif;
 }
 
-.bold-basic::first-letter{
+.bold-basic::first-letter {
   color: #f1f1f1;
 }
 
-.information .bold-basic:first-child::first-letter, .info-bio .bold-basic:first-child::first-letter, .work-section-background .bold-basic:first-child::first-letter{
+.information .bold-basic:first-child::first-letter,
+.info-bio .bold-basic:first-child::first-letter,
+.work-section-background .bold-basic:first-child::first-letter {
   color: #272a2e;
 }
 
-.information .bold-basic:last-child:first-letter{
+.information .bold-basic:last-child:first-letter {
   color: #fff;
 }
 
@@ -530,96 +533,69 @@ footer ul {
   display: none;
 }
 
-.mobile-info-toggle{
+.mobile-info-toggle {
   display: none;
 }
 
+@media screen and (max-width: 1660px) {
+  .carousel-container {
+    display: none;
+  }
+
+  .bio-section {
+    width: 90%;
+  }
+
+  .work-section iframe {
+    height: 500px;
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 1045px) {
+  .work-section iframe {
+    height: 400px;
+    width: 200px;
+  }
+
+  .info-bio {
+    width: 100svw;
+  }
+
+  .bio-section {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .work-section iframe {
+    height: 350px;
+    width: 150px;
+  }
+
+  .work-section-background {
+    display: none;
+  }
+
+  .info-bio {
+    width: 100svw;
+  }
+
+  .bio-section {
+    width: 20px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .acade-section {
+    display: none;
+  }
+}
+
 @media (max-width: 806px) {
+}
 
-  header{
-    overflow-x: hidden;
-  }
-
-  .primary-navigation {
-    position: relative;
-    inset: 0 0 0 370%;
-    z-index: 1000;
-
-    background: hsl(0 0% 100% / 0.5);
-    backdrop-filter: blur(0.5rem);
-
-    flex-direction: column;
-    padding: min(15vh, 10rem) 1px;
-
-    transform: translateX(100%);
-    transition: transform 0.5s ease;
-
-    border-radius: 10px;
-  }
-
-  .primary-navigation[data-visible="true"] {
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    transform: translateX(-10%);
-  }
-
-  .primary-information{
-    position: fixed;
-    inset: 0 0 0 0;
-    z-index: 999;
-
-    padding: 20px;
-
-    flex-direction: row;
-  }
-
-  .primary-navigation li {
-    margin-top: 20px;
-  }
-
-  .nav-links {
-    margin-right: 0;
-  }
-
-  .nav-links li {
-    display: block;
-    padding: 0 20px;
-    padding-bottom: 0;
-  }
-
-  .nav-links li a {
-    font-size: 1em;
-  }
-
-  .nav-links li a::before {
-    display: none;
-  }
-
-  .nav-links li a::before {
-    display: none;
-  }
-
-  .mobile-nav-toggle {
-    display: block;
-    z-index: 9999;
-    background: url("../images/burger-menu-right-svgrepo-com.svg");
-    color: white;
-    background-size: cover;
-    position: absolute;
-    width: 3rem;
-    aspect-ratio: 1;
-    top: 1.5rem;
-    right: 1rem;
-    border: none;
-    animation: all 1s;
-  }
-
-  .mobile-nav-toggle[aria-expanded="true"] {
-    background: url("../images/close-svgrepo-com.svg");
-    width: 3rem;
-    aspect-ratio: 1;
-    background-size: cover;
-  }
-
+@media (max-width: 806px) {
   .background-image {
     background-image: url("../images/BOOK-LEA-2.jpg");
     background-repeat: no-repeat;
@@ -628,33 +604,6 @@ footer ul {
     height: 100svh;
     width: 100vw;
   }
-
-  h1 {
-    display: none;
-  }
-
-  .logo-h1 {
-    padding-top: 10px;
-    padding-left: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 0;
-    left: 5;
-    width: 3.8em;
-    height: 4em;
-    overflow: hidden;
-  }
-
-  .logo-h1 img{
-    height: 100%;
-    width: 100%;
-    position: relative;
-    background-size: cover;
-  }
-
-
 
   .loader {
     display: none;
@@ -679,90 +628,19 @@ footer ul {
   .carousel-hover {
     display: none;
   }
-  
+
   .bio-section {
     font-size: 0.8em;
-    width: 300px;
-    height: 400px;
+    width: 90%;
+    height: 300px;
     overflow-x: hidden;
   }
 
   .information {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: block;
     position: absolute;
-    background: rgba(143, 143, 143, 0.5);
-    backdrop-filter: blur(20px);
     top: 40%;
-    margin-left: 1%;
-    line-height: 1.2;
-    height: 50%;
-    width: 95%;
-    box-shadow: rgba(128, 128, 128, 0.25) 0px 54px 55px,
-      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    border-radius: 5px;
-    overflow-y: hidden;
-    overflow-x: hidden;
+    height: 16rem;
+    width: 25rem;
   }
-  
-  #mobile-text{
-    font-size: 30px;
-    color: #f1f1f1;
-    text-decoration: underline;
-    margin-bottom: 10px;
-  }
-  
-  .description {
-    font-weight: 500;
-    color: #272a2e;
-    letter-spacing: 0.1px;
-    font-size: 1em;
-  }
-
-
-
-
-.information .bold-basic:first-child::first-letter{
-  color: #fff;
-  overflow-y: visible;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
